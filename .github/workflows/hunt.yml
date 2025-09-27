@@ -1,0 +1,70 @@
+name: "Ghost Hunter Workflow"
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_url:
+        description: 'Target GitHub repository URL to scan'
+        required: true
+        type: string
+        default: 'https://github.com/example/repo'
+
+jobs:
+  scan:
+    name: "Vulnerability Scan"
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: "🔧 Checkout Ghost Hunter Repository"
+        uses: actions/checkout@v4
+        
+      - name: "🐍 Setup Python 3.9 Environment"
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          cache: 'pip'
+          
+      - name: "⚡ Install System Dependencies"
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git curl wget
+          
+      - name: "🔬 Install Slither Analyzer"
+        run: |
+          pip install --upgrade pip
+          pip install slither-analyzer
+          
+      - name: "🎯 Execute Ghost Hunter Scan"
+        run: |
+          echo "🚀 Initiating Ghost Hunter scan..."
+          echo "Target: ${{ github.event.inputs.target_url }}"
+          python hunter.py "${{ github.event.inputs.target_url }}"
+          
+      - name: "📋 Verify Report Generation"
+        run: |
+          if [ -f "report.txt" ]; then
+            echo "✅ Report generated successfully"
+            echo "📊 Report size: $(wc -c < report.txt) bytes"
+            echo "📝 Report lines: $(wc -l < report.txt) lines"
+          else
+            echo "❌ Report not found!"
+            exit 1
+          fi
+          
+      - name: "📤 Upload Slither Report Artifact"
+        uses: actions/upload-artifact@v3
+        with:
+          name: "Slither-Report"
+          path: report.txt
+          retention-days: 30
+          
+      - name: "🎭 Operation Summary"
+        run: |
+          echo "================================================="
+          echo "        GHOST HUNTER OPERATION COMPLETED"
+          echo "================================================="
+          echo "Target Repository: ${{ github.event.inputs.target_url }}"
+          echo "Scan Timestamp: $(date)"
+          echo "Prize Wallet: 0x958BD67f2f6be2Dc46D0e9e0Dd6d33F52EfCA67C"
+          echo "Report Status: Available as artifact 'Slither-Report'"
+          echo "================================================="
