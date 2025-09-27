@@ -1,0 +1,100 @@
+
+=============================================================================
+                        GHOST HUNTER VULNERABILITY REPORT
+                            Operation Nightfall - Phase 2
+=============================================================================
+
+TARGET INFORMATION:
+Repository URL: https://github.com/TechsolutionAAA/OHM-Token
+Repository Name: TechsolutionAAA_OHM-Token
+Scan Timestamp: Sat Sep 27 10:27:06 UTC 2025
+Prize Wallet: 0x958BD67f2f6be2Dc46D0e9e0Dd6d33F52EfCA67C
+
+=============================================================================
+                              SLITHER ANALYSIS
+=============================================================================
+
+=== SLITHER STDERR ===
+'npx hardhat clean' running (wd: /tmp/ghost_hunt_TechsolutionAAA_OHM-Token_nzmt3r0x/repo)
+'npx' returned non-zero exit code 1
+WARNING: You are using Node.js 20.19.5 which is not supported by Hardhat.
+stdout: Please upgrade to 22.10.0 or a later LTS version (even major version number)
+npm warn exec The following package was not found and will be installed: hardhat@3.0.6
+stderr: Error HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+stderr: 
+stderr: Please install Hardhat locally using pnpm, npm or yarn, and try again.
+stderr: 
+stderr: For more info go to https://hardhat.org/HHE22 or run Hardhat with --show-stack-traces
+'npx hardhat clean --global' running (wd: /tmp/ghost_hunt_TechsolutionAAA_OHM-Token_nzmt3r0x/repo)
+'npx' returned non-zero exit code 1
+WARNING: You are using Node.js 20.19.5 which is not supported by Hardhat.
+stdout: Please upgrade to 22.10.0 or a later LTS version (even major version number)
+Error HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+stderr: 
+stderr: Please install Hardhat locally using pnpm, npm or yarn, and try again.
+stderr: 
+stderr: For more info go to https://hardhat.org/HHE22 or run Hardhat with --show-stack-traces
+Problem executing hardhat: Error HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+
+Please install Hardhat locally using pnpm, npm or yarn, and try again.
+
+For more info go to https://hardhat.org/HHE22 or run Hardhat with --show-stack-traces
+
+'npx hardhat compile --force' running (wd: /tmp/ghost_hunt_TechsolutionAAA_OHM-Token_nzmt3r0x/repo)
+'npx' returned non-zero exit code 1
+WARNING: You are using Node.js 20.19.5 which is not supported by Hardhat.
+stdout: Please upgrade to 22.10.0 or a later LTS version (even major version number)
+Error HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+stderr: 
+stderr: Please install Hardhat locally using pnpm, npm or yarn, and try again.
+stderr: 
+stderr: For more info go to https://hardhat.org/HHE22 or run Hardhat with --show-stack-traces
+Traceback (most recent call last):
+  File "/usr/local/bin/slither", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/slither/__main__.py", line 776, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/usr/local/lib/python3.12/site-packages/slither/__main__.py", line 882, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/crytic_compile/crytic_compile.py", line 722, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/crytic_compile/crytic_compile.py", line 211, in __init__
+    self._compile(**kwargs)
+  File "/usr/local/lib/python3.12/site-packages/crytic_compile/crytic_compile.py", line 633, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/crytic_compile/platform/hardhat.py", line 184, in compile
+    hardhat_like_parsing(crytic_compile, self._target, build_directory, hardhat_working_dir)
+  File "/usr/local/lib/python3.12/site-packages/crytic_compile/platform/hardhat.py", line 52, in hardhat_like_parsing
+    raise InvalidCompilation(txt)
+crytic_compile.platform.exceptions.InvalidCompilation: Compilation failed. Can you run build command?
+/tmp/ghost_hunt_TechsolutionAAA_OHM-Token_nzmt3r0x/repo/artifacts/build-info is not a directory.
+
+
+
+
+=============================================================================
+                             ANALYSIS SUMMARY
+=============================================================================
+
+Repository: https://github.com/TechsolutionAAA/OHM-Token
+Total Issues Found: [Parse from Slither output]
+Critical Vulnerabilities: [Review required]
+Exploitation Confidence: [Manual assessment needed]
+
+OPERATIONAL NOTES:
+- This is an automated reconnaissance scan
+- Manual verification required for all findings
+- Cross-reference with known vulnerability patterns
+- Prioritize reentrancy, oracle manipulation, and integer overflow issues
+
+PRIZE WALLET ADDRESS: 0x958BD67f2f6be2Dc46D0e9e0Dd6d33F52EfCA67C
+
+=============================================================================
+                         END OF AUTOMATED REPORT
+=============================================================================
