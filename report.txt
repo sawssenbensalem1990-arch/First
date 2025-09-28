@@ -5,9 +5,9 @@
 =============================================================================
 
 TARGET INFORMATION:
-Repository URL: https://github.com/TechsolutionAAA/OHM-Token
-Repository Name: TechsolutionAAA_OHM-Token
-Scan Timestamp: Sat Sep 27 10:27:06 UTC 2025
+Repository URL: https://github.com/bifrost-finance/xcm-action-contracts
+Repository Name: bifrost-finance_xcm-action-contracts
+Scan Timestamp: Sun Sep 28 18:25:56 UTC 2025
 Prize Wallet: 0x958BD67f2f6be2Dc46D0e9e0Dd6d33F52EfCA67C
 
 =============================================================================
@@ -15,17 +15,16 @@ Prize Wallet: 0x958BD67f2f6be2Dc46D0e9e0Dd6d33F52EfCA67C
 =============================================================================
 
 === SLITHER STDERR ===
-'npx hardhat clean' running (wd: /tmp/ghost_hunt_TechsolutionAAA_OHM-Token_nzmt3r0x/repo)
+'npx hardhat clean' running (wd: /tmp/ghost_hunt_bifrost-finance_xcm-action-contracts_gi_fq8xi/repo)
 'npx' returned non-zero exit code 1
 WARNING: You are using Node.js 20.19.5 which is not supported by Hardhat.
 stdout: Please upgrade to 22.10.0 or a later LTS version (even major version number)
-npm warn exec The following package was not found and will be installed: hardhat@3.0.6
-stderr: Error HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+Error HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
 stderr: 
 stderr: Please install Hardhat locally using pnpm, npm or yarn, and try again.
 stderr: 
 stderr: For more info go to https://hardhat.org/HHE22 or run Hardhat with --show-stack-traces
-'npx hardhat clean --global' running (wd: /tmp/ghost_hunt_TechsolutionAAA_OHM-Token_nzmt3r0x/repo)
+'npx hardhat clean --global' running (wd: /tmp/ghost_hunt_bifrost-finance_xcm-action-contracts_gi_fq8xi/repo)
 'npx' returned non-zero exit code 1
 WARNING: You are using Node.js 20.19.5 which is not supported by Hardhat.
 stdout: Please upgrade to 22.10.0 or a later LTS version (even major version number)
@@ -40,7 +39,7 @@ Please install Hardhat locally using pnpm, npm or yarn, and try again.
 
 For more info go to https://hardhat.org/HHE22 or run Hardhat with --show-stack-traces
 
-'npx hardhat compile --force' running (wd: /tmp/ghost_hunt_TechsolutionAAA_OHM-Token_nzmt3r0x/repo)
+'npx hardhat compile --force' running (wd: /tmp/ghost_hunt_bifrost-finance_xcm-action-contracts_gi_fq8xi/repo)
 'npx' returned non-zero exit code 1
 WARNING: You are using Node.js 20.19.5 which is not supported by Hardhat.
 stdout: Please upgrade to 22.10.0 or a later LTS version (even major version number)
@@ -73,7 +72,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.12/site-packages/crytic_compile/platform/hardhat.py", line 52, in hardhat_like_parsing
     raise InvalidCompilation(txt)
 crytic_compile.platform.exceptions.InvalidCompilation: Compilation failed. Can you run build command?
-/tmp/ghost_hunt_TechsolutionAAA_OHM-Token_nzmt3r0x/repo/artifacts/build-info is not a directory.
+/tmp/ghost_hunt_bifrost-finance_xcm-action-contracts_gi_fq8xi/repo/artifacts/build-info is not a directory.
 
 
 
@@ -82,7 +81,7 @@ crytic_compile.platform.exceptions.InvalidCompilation: Compilation failed. Can y
                              ANALYSIS SUMMARY
 =============================================================================
 
-Repository: https://github.com/TechsolutionAAA/OHM-Token
+Repository: https://github.com/bifrost-finance/xcm-action-contracts
 Total Issues Found: [Parse from Slither output]
 Critical Vulnerabilities: [Review required]
 Exploitation Confidence: [Manual assessment needed]
