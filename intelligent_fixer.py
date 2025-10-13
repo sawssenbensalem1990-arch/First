@@ -157,7 +157,7 @@ class IntelligentFixer:
             score += 15
         if "easy" in labels or "beginner" in labels:
             score += 10
-        if len(issue.get("comments", 0)) == 0:  # No one else working
+        if issue.get("comments", 0) == 0:  # No one else working
             score += 10
         if issue.get("assignee") is None:  # Not assigned
             score += 10
